@@ -1,0 +1,117 @@
+{{ define "main"}}
+<section
+  class="hero-inner"
+  style="background-image: url(/assets/img/customer.png)"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center">
+        <h2>Choose a meal plan</h2>
+        <p>To keep things fresh your meals are delivered every day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= About Section ======= -->
+{{with .Params.about}}
+<section class="about">
+  <div class="container">
+    <div class="row content">
+      <div class="col-lg-6">
+        <img src="{{.image}}" alt="About" class="img-fluid" />
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <h2><strong>{{.name}}</strong></h2>
+        <p>{{.content}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!-- End About Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="member d-flex align-items-start">
+          <div class="pic">
+            <img src="/assets/img/team/team-1.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="member-info">
+            <h4>Walter White</h4>
+            <span>Chief Executive Officer</span>
+            <p>Explicabo voluptatem mollitia et repellat</p>
+            <div class="social">
+              <a href=""><i class="ri-twitter-fill"></i></a>
+              <a href=""><i class="ri-facebook-fill"></i></a>
+              <a href=""><i class="ri-instagram-fill"></i></a>
+              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic">
+            <img src="/assets/img/team/team-2.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="member-info">
+            <h4>Sarah Jhonson</h4>
+            <span>Product Manager</span>
+            <p>Aut maiores voluptates amet et quis</p>
+            <div class="social">
+              <a href=""><i class="ri-twitter-fill"></i></a>
+              <a href=""><i class="ri-facebook-fill"></i></a>
+              <a href=""><i class="ri-instagram-fill"></i></a>
+              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic">
+            <img src="/assets/img/team/team-3.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="member-info">
+            <h4>William Anderson</h4>
+            <span>CTO</span>
+            <p>Quisquam facilis cum velit laborum corrupti</p>
+            <div class="social">
+              <a href=""><i class="ri-twitter-fill"></i></a>
+              <a href=""><i class="ri-facebook-fill"></i></a>
+              <a href=""><i class="ri-instagram-fill"></i></a>
+              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic">
+            <img src="/assets/img/team/team-4.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="member-info">
+            <h4>Amanda Jepson</h4>
+            <span>Accountant</span>
+            <p>Dolorum tempora officiis odit laborum officiis</p>
+            <div class="social">
+              <a href=""><i class="ri-twitter-fill"></i></a>
+              <a href=""><i class="ri-facebook-fill"></i></a>
+              <a href=""><i class="ri-instagram-fill"></i></a>
+              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Team Section -->
+{{end}}

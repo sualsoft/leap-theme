@@ -1,0 +1,125 @@
+{{ define "main" }}
+
+<section
+  class="hero-inner"
+  style="background-image: url(/assets/img/bg-img.png)"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center">
+        <h2>Choose a meal plan</h2>
+        <p>To keep things fresh your meals are delivered every day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Pricing Section ======= -->
+{{ with .Params.pricing}}
+<!---->
+{{if .enable}}
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <header class="text-center mb-5">
+      <h2>Meal plansp</h2>
+      <p>Meal prep designed for all lifestyles.</p>
+    </header>
+    <div class="row">
+      {{range .items}}
+      <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+        <div class="box mt-4">
+          <img src="{{.image}}" alt="Pricing Header" class="img-fluid mb-3" />
+
+          <h3 class="{{.color}}">{{.name}}</h3>
+          <h4>{{.title}}</h4>
+          <ul>
+            {{range .list }}
+            <li>Aida dere</li>
+            {{end}}
+          </ul>
+          <h4><sup>{{.currency}}</sup>{{.price}}<span> / {{.per}}</span></h4>
+          <div class="btn-wrap">
+            <a href="{{.link}}" class="btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      {{end}}
+      <!---->
+      {{ with .details}}
+      <div class="details mt-4 text-center">
+        <p>{{.para}}</p>
+        <a href="{{.btn_link}}">{{.btn_label}}</a>
+      </div>
+    </div>
+    {{end}}
+    <!---->
+    {{with .how_to_work}}
+    <div class="how-to-work mt-5 text-center">
+      <div class="row text-center">
+        <h2 class="mb-4 mt-5">{{.title}}</h2>
+        {{range .items}}
+        <div class="col-lg-4 item mt-5 mb-5">
+          <h2><span>{{.number}}</span></h2>
+          <h5><strong>{{.title}}</strong></h5>
+          <p>{{.content}}</p>
+        </div>
+        {{end}}
+      </div>
+      <h6>{{.btn_text}}</h6>
+    </div>
+    {{end}}
+  </div>
+</section>
+<!-- End Pricing Section -->
+{{end}}
+<!---->
+{{end}}
+<!-- End Clients Section -->
+
+<!-- ======= Testimonials Section ======= -->
+{{ with .Params.testimonials}}
+<!---->
+{{if .enable}}
+<section id="testimonials" class="testimonials">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header text-center">
+      <h2>{{.title}}</h2>
+    </header>
+
+    <div
+      class="testimonials-slider swiper"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="swiper-wrapper">
+        {{range .items}}
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p>{{.content}}</p>
+            <div class="profile mt-auto">
+              <img src="{{.image}}" class="testimonial-img" alt="{{.name}}" />
+              <h3>{{.name}}</h3>
+              <h4>{{.position}}</h4>
+            </div>
+          </div>
+        </div>
+        {{end}}
+
+        <!-- End testimonial item -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!---->
+{{end}}
+<!-- End Testimonials Section -->
+
+{{end}}

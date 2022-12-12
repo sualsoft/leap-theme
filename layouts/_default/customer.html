@@ -1,0 +1,115 @@
+{{ define "main"}}
+<section
+  class="hero-inner"
+  style="background-image: url(/assets/img/customer.png)"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center">
+        <h2>Choose a meal plan</h2>
+        <p>To keep things fresh your meals are delivered every day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= About Section ======= -->
+{{with .Params.about}}
+<section class="about">
+  <div class="container">
+    <div class="row content">
+      <div class="col-lg-6">
+        <img src="{{.image}}" alt="About" class="img-fluid" />
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <h2><strong>{{.name}}</strong></h2>
+        <p>{{.content}}</p>
+        <a href="{{.link}}">Watch Tony’s story</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!-- End About Section -->
+
+<!-- ======= Location Section ======= -->
+{{ with .Params.stories}}
+<!---->
+{{if .enable}}
+<section class="locations">
+  <div class="container">
+    <header class="text-center mb-5">
+      <h2>{{.title}}</h2>
+    </header>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-9">
+        <div class="row">
+          {{range .items}}
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="box mt-3">
+              <img
+                src="{{.image}}"
+                alt="Location Header"
+                class="img-fluid mb-3"
+              />
+
+              <div class="content">
+                <p>{{.address}}</p>
+                <a href="/"><strong>Read More</strong></a>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!---->
+{{end}}
+<!-- End Location Section -->
+
+<!-- ======= coupon Section ======= -->
+{{with .Params.coupon}}
+<!---->
+{{if .enable}}
+<section class="coupon">
+  <div class="container">
+    <div class="row content justify-content-center">
+      <div class="col-lg-9 pt-4 pt-lg-0 text-center">
+        <h2><strong>{{.title}}</strong></h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-4 col-md-9 col-sm-12">
+        <form>
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group mt-3">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" />
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-3">
+            Start free trial today
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!---->
+{{end}}
+<!-- End coupon Section -->
+
+{{end}}
