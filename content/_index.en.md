@@ -36,8 +36,11 @@ pricing:
   items:
     - name: Meal Plan A
       color: text-info #search google bootstrap colors
-      image: /assets/img/pricing.png
+      image: /assets/img/meal-prep-delivery-service-uk.png
       title: 1,500 kcal
+      content:
+        "A lean meal plan for those who wish to loose weight. Features less
+        carbs but high in fat"
       link: /
       currency: $
       price: 24
@@ -50,8 +53,11 @@ pricing:
 
     - name: Meal Plan A
       color: text-danger
-      image: /assets/img/pricing.png
+      image: /assets/img/meal-prep-delivery-service-uk.png
       title: 1,500 kcal
+      content:
+        "A lean meal plan for those who wish to loose weight. Features less
+        carbs but high in fat"
       link: /
       currency: $
       price: 24
@@ -64,8 +70,11 @@ pricing:
 
     - name: Meal Plan A
       color: text-warning
-      image: /assets/img/pricing.png
+      image: /assets/img/meal-prep-delivery-service-uk.png
       title: 1,500 kcal
+      content:
+        "A lean meal plan for those who wish to loose weight. Features less
+        carbs but high in fat"
       link: /
       currency: $
       price: 24

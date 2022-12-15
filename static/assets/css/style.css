@@ -67,7 +67,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: var(--green-color);
+  background: transparent;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -130,7 +130,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #c9c8c8;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -163,6 +163,71 @@ h6 {
 .navbar .getstarted:focus:hover {
   color: #000;
   background: var(--cream-color);
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--green-color);
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
+  color: #000;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
 }
 
 /**
@@ -610,18 +675,19 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Pricing
+# Pricing 
 --------------------------------------------------------------*/
 .pricing .box {
-  padding: 20px;
   background: #fff;
   text-align: center;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 5px;
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
-
+.pricing .box .content {
+  padding: 20px;
+}
 .pricing h3 {
   font-weight: 400;
   margin: -20px -20px 5px -20px;
@@ -686,7 +752,7 @@ section {
   background: #fff;
   display: inline-block;
   padding: 8px 35px 9px 35px;
-  border-radius: 4px;
+  border-radius: 5px;
   color: var(--green-color);
   border: 1px solid var(--green-color);
   transition: none;
@@ -718,6 +784,7 @@ section {
   background-color: var(--green-color);
   padding: 10px 20px;
   transition: all 0.3s ease-in-out;
+  border-radius: 5px;
 }
 .pricing .details a:hover {
   color: var(--green-color);
@@ -733,11 +800,12 @@ section {
 }
 .pricing .how-to-work h2 {
   color: var(--green-color);
+
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }
 
-.pricing .how-to-work h2 span {
+.pricing .how-to-work h3 span {
   background-color: var(--green-color);
   color: var(--cream-color);
   display: flex;
@@ -745,8 +813,8 @@ section {
   width: 50px;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
   border-radius: 700px;
+  font-size: 18px;
 }
 
 .pricing .how-to-work h6 {
@@ -754,6 +822,27 @@ section {
   font-weight: 600;
 }
 
+/*
+order
+*/
+.order {
+  background-color: var(--cream-color);
+}
+.order h2 {
+  font-weight: 700;
+  color: var(--green-color);
+}
+
+.order a {
+  background-color: var(--green-color);
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+.order a:hover {
+  color: #000;
+}
 /*
 locations
 */
@@ -867,13 +956,18 @@ locations
 .about .content {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #f4fbf8;
+  align-items: stretch;
+}
+.about .bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about .content a {
   color: var(--green-color);
 }
-
+.about .bg-color {
+  background-color: #f4fbf8;
+}
 .about .btn {
   display: flex;
   justify-content: center;
@@ -883,6 +977,7 @@ locations
   color: var(--cream-color);
   background-color: var(--green-color);
   padding: 10px 12px;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
@@ -1052,7 +1147,7 @@ locations
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #d9232d;
+  border-color: var(--green-color);
 }
 
 .contact .php-email-form input {
@@ -1064,7 +1159,7 @@ locations
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #d9232d;
+  background: var(--green-color);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1073,7 +1168,7 @@ locations
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #e24d55;
+  background: #000;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1340,4 +1435,14 @@ locations
 
 #footer .credits a:hover {
   color: var(--green-color);
+}
+
+#footer .social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+#footer .social a i {
+  font-size: 24px;
 }

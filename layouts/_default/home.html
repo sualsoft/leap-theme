@@ -99,16 +99,21 @@
       {{range .items}}
       <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
         <div class="box">
-          <img src="{{.image}}" alt="Pricing Header" class="img-fluid mb-3" />
+          <div class="img">
+            <img src="{{.image}}" alt="Pricing Header" class="img-fluid mb-3" />
+          </div>
 
-          <h3 class="{{.color}}">{{.name}}</h3>
-          <h4>{{.title}}</h4>
-          <ul>
-            {{range .list }}
-            <li>Aida dere</li>
-            {{end}}
-          </ul>
-          <h4><sup>{{.currency}}</sup>{{.price}}<span> / {{.per}}</span></h4>
+          <div class="content">
+            <h3 class="{{.color}}">{{.name}}</h3>
+            <h4>{{.title}}</h4>
+            <p>{{.content}}</p>
+            <ul>
+              {{range .list }}
+              <li>{{.}}</li>
+              {{end}}
+            </ul>
+            <h4><sup>{{.currency}}</sup>{{.price}}<span> / {{.per}}</span></h4>
+          </div>
           <div class="btn-wrap">
             <a href="{{.link}}" class="btn-buy">Buy Now</a>
           </div>
@@ -130,13 +135,12 @@
         <h2 class="mb-4 mt-5">{{.title}}</h2>
         {{range .items}}
         <div class="col-lg-4 item mt-5 mb-5">
-          <h2><span>{{.number}}</span></h2>
+          <h3><span>{{.number}}</span></h3>
           <h5><strong>{{.title}}</strong></h5>
           <p>{{.content}}</p>
         </div>
         {{end}}
       </div>
-      <h6>{{.btn_text}}</h6>
     </div>
     {{end}}
   </div>
@@ -146,6 +150,41 @@
 <!---->
 {{end}}
 <!-- End Clients Section -->
+
+<!-- ======= Order Section ======= -->
+<section class="order">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="mb-1">Order Now - delivery</h2>
+      <p class="mb-4">
+        Healthy food delivered fresh and fast with our new on-demand service.
+      </p>
+      <div class="col-lg-3">
+        <a href=""
+          ><img src="/assets/img/order-1.png" alt="Image" class="img-fluid"
+        /></a>
+      </div>
+      <div class="col-lg-3">
+        <a href=""
+          ><img src="/assets/img/order-2.png" alt="Image" class="img-fluid"
+        /></a>
+      </div>
+      <div class="col-lg-3">
+        <a href=""
+          ><img src="/assets/img/order-3.png" alt="Image" class="img-fluid"
+        /></a>
+      </div>
+      <div class="col-lg-3">
+        <a href=""
+          ><img src="/assets/img/order-4.png" alt="Image" class="img-fluid"
+        /></a>
+      </div>
+      <div class="btn mt-5">
+        <a href="/">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ======= Location Section ======= -->
 {{ with .Params.locations}}
@@ -240,10 +279,11 @@
 <section class="about">
   <div class="container">
     <div class="row content">
-      <div class="col-lg-6">
-        <img src="{{.image}}" alt="About" class="img-fluid" />
-      </div>
-      <div class="col-lg-6 pt-4 pt-lg-0">
+      <div
+        class="col-lg-4 bg-img"
+        style="background-image: url({{.image}}) ;"
+      ></div>
+      <div class="col-lg-5 p-4 bg-color">
         <h2><strong>{{.name}}</strong></h2>
         <p>{{.content}}</p>
         <a href="{{.link}}">Watch Tony’s story</a>

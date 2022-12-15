@@ -1,0 +1,26 @@
+{{ define "main"}}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+    <div class="align-items-center">
+      <ol>
+        <li>Last Updated: {{ .Page.Lastmod.Month }}-{{ .Page.Lastmod.Day }}</li>
+      </ol>
+      <h2>{{.Title}}</h2>
+    </div>
+  </div>
+</section>
+<!-- End Breadcrumbs -->
+<!-- ======= F.A.Q Section ======= -->
+<section id="faq" class="faq">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <!-- F.A.Q List 1-->
+        {{.Content}}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End F.A.Q Section -->
+{{end}}
