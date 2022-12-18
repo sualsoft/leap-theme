@@ -85,19 +85,18 @@
 <!-- End Clients Section -->
 
 <!-- ======= Pricing Section ======= -->
-{{ with .Params.pricing}}
-<!---->
-{{if .enable}}
-<!-- ======= Pricing Section ======= -->
-<section id="pricing" class="pricing">
+<section class="pricing">
   <div class="container">
     <header class="text-center mb-5">
       <h2>Meal plansp</h2>
       <p>Meal prep designed for all lifestyles.</p>
     </header>
     <div class="row">
-      {{range .items}}
-      <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+      {{ range (where site.RegularPages "Type" "meal_feature")}}
+      <!---->
+      {{ with .Params.meal_plan}}
+
+      <div class="col-lg-4 col-md-6 mt-5">
         <div class="box">
           <div class="img">
             <img src="{{.image}}" alt="Pricing Header" class="img-fluid mb-3" />
@@ -114,22 +113,27 @@
             </ul>
             <h4><sup>{{.currency}}</sup>{{.price}}<span> / {{.per}}</span></h4>
           </div>
-          <div class="btn-wrap">
-            <a href="{{.link}}" class="btn-buy">Buy Now</a>
+          {{end}}
+          <div class="btn-wrap mb-3">
+            <a href="{{.Permalink}}" class="btn-buy">Buy Now</a>
           </div>
         </div>
       </div>
+      <!--end-->
       {{end}}
       <!---->
-      {{ with .details}}
+    </div>
+    <!---->
+    <div class="row">
+      {{ with .Params.details}}
       <div class="details mt-4 text-center">
         <p>{{.para}}</p>
         <a href="{{.btn_link}}">{{.btn_label}}</a>
       </div>
+      {{end}}
     </div>
-    {{end}}
     <!---->
-    {{with .how_to_work}}
+    {{with .Params.how_to_work}}
     <div class="how-to-work mt-5 text-center">
       <div class="row text-center">
         <h2 class="mb-4 mt-5">{{.title}}</h2>
@@ -145,88 +149,73 @@
     {{end}}
   </div>
 </section>
-<!-- End Pricing Section -->
-{{end}}
-<!---->
-{{end}}
+
 <!-- End Clients Section -->
 
 <!-- ======= Order Section ======= -->
+{{with.Params.order}}
+<!---->
+{{ if.enable}}
 <section class="order">
   <div class="container">
     <div class="row text-center">
-      <h2 class="mb-1">Order Now - delivery</h2>
-      <p class="mb-4">
-        Healthy food delivered fresh and fast with our new on-demand service.
-      </p>
+      <h2 class="mb-1">{{.title}}</h2>
+      <p class="mb-4">{{.subtitle}}</p>
+      {{ range.images}}
       <div class="col-lg-3">
-        <a href=""
-          ><img src="/assets/img/order-1.png" alt="Image" class="img-fluid"
-        /></a>
+        <img src="{{.}}" alt="Image" class="img-fluid" />
       </div>
-      <div class="col-lg-3">
-        <a href=""
-          ><img src="/assets/img/order-2.png" alt="Image" class="img-fluid"
-        /></a>
-      </div>
-      <div class="col-lg-3">
-        <a href=""
-          ><img src="/assets/img/order-3.png" alt="Image" class="img-fluid"
-        /></a>
-      </div>
-      <div class="col-lg-3">
-        <a href=""
-          ><img src="/assets/img/order-4.png" alt="Image" class="img-fluid"
-        /></a>
-      </div>
+      {{end}}
       <div class="btn mt-5">
         <a href="/">Order Now</a>
       </div>
     </div>
   </div>
 </section>
+{{end}}
+<!---->
+{{end}}
 
 <!-- ======= Location Section ======= -->
-{{ with .Params.locations}}
-<!---->
-{{if .enable}}
+
 <section class="locations">
   <div class="container">
     <header class="text-center mb-5">
-      <h2>{{.title}}</h2>
+      <h2>{{ with .Params.locations}}{{.title}}{{end}}</h2>
     </header>
     <div class="row justify-content-center align-items-center">
-      <div class="col-md-9">
-        <div class="row">
-          {{range .items}}
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <img
-                src="{{.image}}"
-                alt="Location Header"
-                class="img-fluid mb-3"
-              />
-
-              <div class="content">
-                <h4><b>{{.title}}</b></h4>
-
-                <p>{{.address}}</p>
-                <p>TEL: {{.tel}}</p>
-              </div>
-            </div>
-          </div>
+      {{ range first 3 (where site.RegularPages "Section" "locations")}}
+      <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+        <div class="box">
+          {{ with.Params.about}}
+          <img src="{{.image}}" alt="Location Header" class="img-fluid mb-3" />
           {{end}}
+
+          <div class="content">
+            <h4>
+              <b
+                ><a href="{{.Permalink}}"
+                  >{{ with.Params.about}}{{.title}}{{end}}</a
+                ></b
+              >
+            </h4>
+            {{ with.Params.about}}
+
+            <p>{{.address}}</p>
+            <p>TEL: {{.tel}}</p>
+            {{end}}
+          </div>
         </div>
       </div>
+      {{end}}
       <div class="btn mt-3">
+        {{ with .Params.locations}}
         <a href="{{.btn_link}}">{{.btn_label}}</a>
+        {{end}}
       </div>
     </div>
   </div>
 </section>
-{{end}}
-<!---->
-{{end}}
 <!-- End Location Section -->
 
 <!-- ======= Testimonials Section ======= -->
@@ -283,7 +272,12 @@
         class="col-lg-4 bg-img"
         style="background-image: url({{.image}}) ;"
       ></div>
-      <div class="col-lg-5 p-4 bg-color">
+
+      <div class="col-sm-12 bg-img2 d-block d-sm-none">
+        <img src="{{.image}}" alt="Image" class="img-fluid" />
+      </div>
+
+      <div class="col-lg-5 col-sm-12 p-4 bg-color text-sm-center text-md-start">
         <h2><strong>{{.name}}</strong></h2>
         <p>{{.content}}</p>
         <a href="{{.link}}">Watch Tony’s story</a>

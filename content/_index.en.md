@@ -31,101 +31,40 @@ top_cta:
   title: Healthy food restaurants, delivery and meal plans!
   logo: /assets/img/logo.png
 
-pricing:
-  enable: true
+details:
+  para: Discover why we are the best meal plan service in Bangkok and Pattaya!
+  btn_link: /all-plans/
+  btn_label: All Meal Plans
+
+how_to_work:
+  title: How it works
+  btn_text: No more than 3 steps
   items:
-    - name: Meal Plan A
-      color: text-info #search google bootstrap colors
-      image: /assets/img/meal-prep-delivery-service-uk.png
-      title: 1,500 kcal
-      content:
-        "A lean meal plan for those who wish to loose weight. Features less
-        carbs but high in fat"
-      link: /
-      currency: $
-      price: 24
-      per: Month
-      list:
-        - Aida dere
-        - Nec feugiat nisl
-        - Nulla at volutpat dola
-        - Massa ultricies mi
+    - number: 1
+      title: Choose a meal plan
+      content: Select a plan that works best for your health needs and fitness schedule.
 
-    - name: Meal Plan A
-      color: text-danger
-      image: /assets/img/meal-prep-delivery-service-uk.png
-      title: 1,500 kcal
-      content:
-        "A lean meal plan for those who wish to loose weight. Features less
-        carbs but high in fat"
-      link: /
-      currency: $
-      price: 24
-      per: Month
-      list:
-        - Aida dere
-        - Nec feugiat nisl
-        - Nulla at volutpat dola
-        - Massa ultricies mi
+    - number: 2
+      title: Daily deliveries
+      content: We deliver daily to your home or place of work (Bangkok and Pattaya).
 
-    - name: Meal Plan A
-      color: text-warning
-      image: /assets/img/meal-prep-delivery-service-uk.png
-      title: 1,500 kcal
-      content:
-        "A lean meal plan for those who wish to loose weight. Features less
-        carbs but high in fat"
-      link: /
-      currency: $
-      price: 24
-      per: Month
-      list:
-        - Aida dere
-        - Nec feugiat nisl
-        - Nulla at volutpat dola
-        - Massa ultricies mi
+    - number: 3
+      title: Repeat
+      content: We make it easy for you to reorder. No lock-in pause or cancel anytime.
 
-  details:
-    para: Discover why we are the best meal plan service in Bangkok and Pattaya!
-    btn_link: /
-    btn_label: All Meal Plans
-
-  how_to_work:
-    title: How it works
-    btn_text: No more than 3 steps
-    items:
-      - number: 1
-        title: Choose a meal plan
-        content: Select a plan that works best for your health needs and fitness schedule.
-
-      - number: 2
-        title: Daily deliveries
-        content: We deliver daily to your home or place of work (Bangkok and Pattaya).
-
-      - number: 3
-        title: Repeat
-        content: We make it easy for you to reorder. No lock-in pause or cancel anytime.
+order:
+  enable: true
+  title: Order Now - delivery
+  subtitle: Healthy food delivered fresh and fast with our new on-demand service.
+  images:
+    - /assets/img/order-1.png
+    - /assets/img/order-2.png
+    - /assets/img/order-3.png
+    - /assets/img/order-4.png
 
 locations:
-  title: Locations
-  enable: true
-  btn_link: /
+  btn_link: /locations/
   btn_label: Locations
-  items:
-    - title: Easy Health Soi 21
-      address: 44 4 Soi Sukhumvit 21, Khlong Toei Nuea, Watthana, Bangkok 10110
-      image: /assets/img/resturant.jpg
-      tel: 02 000 9999
-
-    - title: Easy Health Soi 21
-      address: 44 4 Soi Sukhumvit 21, Khlong Toei Nuea, Watthana, Bangkok 10110
-      image: /assets/img/resturant.jpg
-      tel: 02 000 9999
-
-    - title: Easy Health Soi 21
-      address: 44 4 Soi Sukhumvit 21, Khlong Toei Nuea, Watthana, Bangkok 10110
-      image: /assets/img/resturant.jpg
-      tel: 02 000 9999
 
 testimonials:
   enable: true

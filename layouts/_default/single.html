@@ -1,26 +1,121 @@
-{{ define "main"}}
-<!-- ======= Breadcrumbs ======= -->
-<section id="breadcrumbs" class="breadcrumbs">
-  <div class="container">
-    <div class="align-items-center">
-      <ol>
-        <li>Last Updated: {{ .Page.Lastmod.Month }}-{{ .Page.Lastmod.Day }}</li>
-      </ol>
-      <h2>{{.Title}}</h2>
-    </div>
-  </div>
-</section>
-<!-- End Breadcrumbs -->
-<!-- ======= F.A.Q Section ======= -->
-<section id="faq" class="faq">
-  <div class="container" data-aos="fade-up">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <!-- F.A.Q List 1-->
-        {{.Content}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>{{.Title}}</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/logo.png" rel="icon" />
+    <link href="/assets/img/logo.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center" style="background-color: #6c9286;">
+      <div class="container d-flex align-items-center">
+        <a href="/" class="logo me-auto"
+          ><img src="/assets/img/logo.png" alt="" class="img-fluid"
+        /></a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/all-plans" class="active">Meal Plans</a></li>
+
+            <li><a href="/locations">Dine in Locations</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/customers-story">Customer Story</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Copmpany</span> <i class="bi bi-chevron-right"></i
+              ></a>
+              <ul>
+                <li><a href="/about-us">Our Story</a></li>
+                <li><a href="/faq">FAQs</a></li>
+                <li><a href="/contact-us">Contact us</a></li>
+                <li><a href="/terms">T&Cs</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="getstarted">Order now</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
       </div>
-    </div>
-  </div>
-</section>
-<!-- End F.A.Q Section -->
-{{end}}
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+          <div class="align-items-center">
+            <ol>
+              <li>
+                Last Updated: {{ .Page.Lastmod.Month }}-{{ .Page.Lastmod.Day }}
+              </li>
+            </ol>
+            <h2>{{.Title}}</h2>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+      <!-- ======= F.A.Q Section ======= -->
+      <section  class="faq">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <!-- F.A.Q List 1-->
+              {{.Content}}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End F.A.Q Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer"}}
+    <!-- End Footer -->
+    {{ partial "scripts"}}
+  </body>
+</html>
+
+    </main>
+  </body>
+</html>

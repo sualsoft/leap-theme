@@ -1,55 +1,57 @@
 {{ define "main"}}
-<section
-  class="hero-inner"
-  style="background-image: url(/assets/img/bg-img.png)"
->
+<!---->
+{{with .Params.hero_section}}
+<!---->
+{{if.enable}}
+<section class="hero-inner" style="background-image: url({{.bg_image}})">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9 text-center">
-        <h2>Choose a meal plan</h2>
-        <p>To keep things fresh your meals are delivered every day</p>
+        <h2>{{.title}}</h2>
+        <p>{{.sub_title}}</p>
       </div>
     </div>
   </div>
 </section>
+{{end}}
+<!---->
+{{end}}
 
 <!-- ======= Location Section ======= -->
-{{ with .Params.locations}}
-<!---->
-{{if .enable}}
+
 <section class="locations">
   <div class="container">
     <header class="text-center mb-5">
-      <h2>{{.title}}</h2>
+      <h2>More Locatios</h2>
     </header>
     <div class="row justify-content-center align-items-center">
-      <div class="col-md-9">
-        <div class="row">
-          {{range .items}}
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <img
-                src="{{.image}}"
-                alt="Location Header"
-                class="img-fluid mb-3"
-              />
-
-              <div class="content">
-                <h4><b>{{.title}}</b></h4>
-
-                <p>{{.address}}</p>
-                <p>TEL: {{.tel}}</p>
-              </div>
-            </div>
-          </div>
+      {{ range first 3 (where site.RegularPages "Section" "locations")}}
+      <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+        <div class="box">
+          {{ with.Params.about}}
+          <img src="{{.image}}" alt="Location Header" class="img-fluid mb-3" />
           {{end}}
+
+          <div class="content">
+            <h4>
+              <b
+                ><a href="{{.Permalink}}"
+                  >{{ with.Params.about}}{{.title}}{{end}}</a
+                ></b
+              >
+            </h4>
+            {{ with.Params.about}}
+
+            <p>{{.address}}</p>
+            <p>TEL: {{.tel}}</p>
+            {{end}}
+          </div>
         </div>
       </div>
+      {{end}}
     </div>
   </div>
 </section>
-{{end}}
-<!---->
-{{end}}
+
 <!-- End Location Section -->
 {{end}}

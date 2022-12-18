@@ -1,18 +1,22 @@
 {{ define "main" }}
 
-<section
-  class="hero-inner"
-  style="background-image: url(/assets/img/bg-img.png)"
->
+<!---->
+{{with .Params.hero_section}}
+<!---->
+{{if.enable}}
+<section class="hero-inner" style="background-image: url({{.bg_image}})">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9 text-center">
-        <h2>Choose a meal plan</h2>
-        <p>To keep things fresh your meals are delivered every day</p>
+        <h2>{{.title}}</h2>
+        <p>{{.sub_title}}</p>
       </div>
     </div>
   </div>
 </section>
+{{end}}
+<!---->
+{{end}}
 
 <!-- ======= Portfolio Section ======= -->
 <section id="portfolio" class="portfolio">
@@ -21,286 +25,103 @@
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
           <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-1">Day 1</li>
+          <li data-filter=".filter-2">Day 2</li>
+          <li data-filter=".filter-3">Day 3</li>
+          <li data-filter=".filter-4">Day 4</li>
+          <li data-filter=".filter-5">Day 5</li>
         </ul>
       </div>
     </div>
-
+    {{with.Params.dishes}}
     <div class="row portfolio-container">
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+      {{range .dish}}
+      <div class="col-lg-4 col-md-6 portfolio-item filter-{{.day}}">
         <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-1.jpg"
-            class="img-fluid"
-            alt=""
-          />
+          <img src="{{.img}}" class="img-fluid" alt="{{.title}}" />
           <div class="portfolio-info">
-            <h4>App 1</h4>
-            <p>App</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-1.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="App 1"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
+            <h4>{{.title}}</h4>
+            <p>{{.subtitle}}</p>
+            <div class="portfolio-links mt-3">
+              <a href="{{.buy_btn}}" title="buy now"
+                ><i class="bx bx-plus"></i>Buy Now</a
+              >
+
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#{{.id}}"
+              >
+                <a>Details</a>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      {{end}}
+    </div>
+    {{end}}
+  </div>
+</section>
+<!-- End Portfolio Section -->
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-2.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-2.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Web 3"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
+<!-- Modal -->
+{{with .Params.dishes}}
+<!---->
+{{range .dish}}
+<div
+  class="modal fade"
+  id="{{.id}}"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{.title}}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div
+            class="row justify-content-center align-items-center align-items-stretch"
+          >
+            <div class="col-md-4 p-0">
+              <img src="{{.img}}" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-4 content p-lg-5 p-sm-2">
+              <p>{{.description}}</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-3.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>App 2</h4>
-            <p>App</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-3.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="App 2"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
+          <hr />
+          <div class="row justify-content-center align-items-center">
+            {{range .items}}
+            <div class="col-lg-4 mt-4">
+              <div class="title text-center mb-3">
+                <h4>{{.title}}</h4>
+              </div>
+              <ul>
+                {{range.list}}
+                <li>{{. | safeHTML}}</li>
+                {{end}}
+              </ul>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-4.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Card 2</h4>
-            <p>Card</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-4.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Card 2"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-5.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Web 2</h4>
-            <p>Web</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-5.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Web 2"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-6.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>App 3</h4>
-            <p>App</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-6.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="App 3"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-7.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Card 1</h4>
-            <p>Card</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-7.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Card 1"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-8.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Card 3</h4>
-            <p>Card</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-8.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Card 3"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img
-            src="/assets/img/portfolio/portfolio-9.jpg"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
-            <div class="portfolio-links">
-              <a
-                href="/assets/img/portfolio/portfolio-9.jpg"
-                data-gallery="portfolioGallery"
-                class="portfolio-lightbox"
-                title="Web 3"
-                ><i class="bx bx-plus"></i
-              ></a>
-              <a
-                href="/"
-                class="portfolio-details-lightbox"
-                data-glightbox="type: external"
-                title="Portfolio Details"
-                ><i class="bx bx-link"></i
-              ></a>
-            </div>
+            {{end}}
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End Portfolio Section -->
+</div>
+{{end}}
+<!---->
+{{end}}
+<!---->
 
 {{end}}

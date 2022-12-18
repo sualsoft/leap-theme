@@ -14,6 +14,13 @@
   };
 
   /**
+   * Initiate  glightbox
+   */
+  const glightbox = GLightbox({
+    selector: ".glightbox",
+  });
+
+  /**
    * Testimonials slider
    */
   new Swiper(".testimonials-slider", {
