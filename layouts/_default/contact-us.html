@@ -1,17 +1,19 @@
-{{ define "main"}}
-<section
-  class="hero-inner"
-  style="background-image: url(/assets/img/customer.png)"
->
+{{ define "main"}} {{with .Params.hero_section}}
+<!---->
+{{if.enable}}
+<section class="hero-inner" style="background-image: url({{.bg_image}})">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9 text-center">
-        <h2>Choose a meal plan</h2>
-        <p>To keep things fresh your meals are delivered every day</p>
+        <h2>{{.title}}</h2>
+        <p>{{.sub_title}}</p>
       </div>
     </div>
   </div>
 </section>
+{{end}}
+<!---->
+{{end}}
 
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">

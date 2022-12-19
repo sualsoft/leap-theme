@@ -7,7 +7,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #444444;
 }
 
@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Noto Serif Kannada", serif;
 }
 
 /*--------------------------------------------------------------
@@ -128,7 +128,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #c9c8c8;
@@ -470,7 +470,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  font-family: "Noto Serif Kannada", serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -571,7 +571,7 @@ h6 {
   z-index: 1;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .hero-inner p {
@@ -593,7 +593,7 @@ h6 {
   align-items: center;
 }
 .content {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .content h2 {
@@ -649,7 +649,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .section-title h2::after {
@@ -667,7 +667,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #556270;
 }
 
@@ -767,7 +767,7 @@ section {
   font-size: 36px;
   color: var(--green-color);
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -824,7 +824,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: "Noto Serif Kannada", serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -877,7 +877,7 @@ section {
 .pricing .how-to-work h2 {
   color: var(--green-color);
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
+  font-family: "Noto Serif Kannada", serif;
   background-color: transparent;
 }
 
@@ -887,7 +887,7 @@ section {
 .pricing .how-to-work h3 span {
   color: var(--cream-color);
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   justify-content: center;
   align-items: center;
   border-radius: 700px;
@@ -1547,7 +1547,49 @@ Modal body
 .team .member .social a + a {
   margin-left: 8px;
 }
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.blog .box {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-family: "Josefin Sans", sans-serif;
+}
 
+.blog .box img {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.blog .box .content {
+  font-family: "Josefin Sans", sans-serif;
+  padding: 25px 20px;
+}
+.blog .box h5 {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--green-color);
+}
+.blog .box h5 span {
+  color: #000;
+}
+
+.blog .box p {
+  color: #000;
+}
+
+.blog .box .content .author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog .box .content .author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 90%;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
