@@ -777,6 +777,10 @@ section {
   left: -3px;
 }
 
+.pricing .key h3 {
+  font-size: 32px;
+}
+
 .pricing h4 span {
   color: #bababa;
   font-size: 16px;
@@ -1418,22 +1422,39 @@ locations
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
-
+.portfolio .btn a {
+  background-color: var(--green-color);
+  color: var(--cream-color);
+  padding: 8px 12px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 4px;
+}
+.portfolio .btn a:hover {
+  background-color: var(--cream-color);
+  color: var(--green-color);
+}
 /*---
 Modal body
 -----*/
 .modal-body .content {
-  background-color: #f4fbf8;
+  background-color: var(--green-color);
 }
 .modal-body .content p {
-  color: var(--green-color);
+  color: #fff;
   font-weight: 600;
 }
 
-.modal-body h4 {
+.modal-body .title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-body li h4 {
   color: #000;
   font-size: 22px;
   font-weight: 700;
+  text-align: center !important;
 }
 .modal-body ul {
   width: 100%;

@@ -2,6 +2,7 @@
 title: Meal Plan 2
 layout: individual-plan
 type: meal_feature
+param_key: 1,500 kcal
 hero_section:
   enable: true
   bg_image: /assets/img/bg-img.png
@@ -25,6 +26,7 @@ meal_plan:
     - Massa ultricies mi
 
 dishes:
+  buy_btn: /
   dish:
     - title: Day meal Plans
       subtitle: Healthy Meal Plan for day 1

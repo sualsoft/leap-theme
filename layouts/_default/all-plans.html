@@ -23,6 +23,11 @@
   <div class="container">
     <header class="text-center mb-5"></header>
     <div class="row">
+      {{ range .Pages.GroupByParam "param_key" }}
+      <div class="key">
+        <h3 class="mt-5 titleh3 text-center">{{ .Key }}</h3>
+      </div>
+      <!---->
       {{range .Pages}}
       <!---->
       {{ with .Params.meal_plan}}
@@ -50,6 +55,8 @@
         </div>
       </div>
 
+      <!--end-->
+      {{end}}
       <!--end-->
       {{end}}
 

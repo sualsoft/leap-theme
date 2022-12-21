@@ -1,7 +1,7 @@
 ---
 title: Meal Plan 7
 layout: individual-plan
-
+param_key: 2,500 kcal
 hero_section:
   enable: true
   bg_image: /assets/img/bg-img.png
@@ -14,7 +14,7 @@ meal_plan:
   image: /assets/img/meal-prep-delivery-service-uk.png
   content: "A lean meal plan for those who wish to loose weight. Features less
     carbs but high in fat"
-  title: 1,500 kcal
+  title: 2,500 kcal
   currency: $
   price: 24
   per: Month
@@ -25,6 +25,7 @@ meal_plan:
     - Massa ultricies mi
 
 dishes:
+  buy_btn: /
   dish:
     - title: Day meal Plans
       subtitle: Healthy Meal Plan for day 1

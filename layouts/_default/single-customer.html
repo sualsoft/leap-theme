@@ -1,83 +1,175 @@
-{{ define "main"}}
-<!---->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-{{with .Params.hero}}
-<!---->
-{{if.enable}}
-<section class="hero-inner2" style="background-color: #f7ede2">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7 text-center">
-        <h2>{{.title}}</h2>
-        <p>{{.sub_title}}</p>
+    <title>{{.Title}}</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/logo.png" rel="icon" />
+    <link href="/assets/img/logo.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Noto+Serif+Kannada:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header
+      id="header"
+      class="fixed-top d-flex align-items-center"
+      style="background-color: #6c9286"
+    >
+      <div class="container d-flex align-items-center">
+        <a href="/" class="logo me-auto"
+          ><img src="/assets/img/logo.png" alt="" class="img-fluid"
+        /></a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/all-plans" class="active">Meal Plans</a></li>
+
+            <li><a href="/locations">Dine in Locations</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/customers-story">Customer Story</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Copmpany</span> <i class="bi bi-chevron-right"></i
+              ></a>
+              <ul>
+                <li><a href="/about-us">Our Story</a></li>
+                <li><a href="/faq">FAQs</a></li>
+                <li><a href="/contact-us">Contact us</a></li>
+                <li><a href="/terms">T&Cs</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="getstarted">Order now</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
       </div>
-      <div
-        class="col-lg-6 customer-bg"
-        style="background-image: url({{.img}});"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <div class="d-flex justify-content-center">
-          <a href="{{.video}}" class="glightbox btn-watch-video"
-            ><i class="bi bi-play-fill"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{end}}
-<!---->
-{{end}}
+    </header>
+    <!-- End Header -->
 
-<section class="content">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7">{{.Content}}</div>
-    </div>
-  </div>
-</section>
-
-<!-- ======= Location Section ======= -->
-
-<section class="locations">
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-md-9">
-        <div class="text-center mb-4">
-          <h2><b>Related Story</b></h2>
-        </div>
-        <div class="row">
-          {{ range first 3 (where site.RegularPages "Section"
-          "customers-story")}}
-          <!---->
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box mt-3">
-              {{with .Params.information}}
-              <img
-                src="{{.img}}"
-                alt="Location Header"
-                class="img-fluid mb-3"
-              />
-              {{end}}
-
-              <div class="content">
-                {{with .Params.information}}
-                <p>{{.description}}</p>
-                {{end}}
-                <a href="{{.Permalink}}"><strong>Read More</strong></a>
+    <main id="main">
+      {{with .Params.hero}}
+      <!---->
+      {{if.enable}}
+      <section class="hero-inner2" style="background-color: #f7ede2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <h2>{{.title}}</h2>
+              <p>{{.sub_title}}</p>
+            </div>
+            <div
+              class="col-lg-6 customer-bg"
+              style="background-image: url({{.img}});"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="d-flex justify-content-center">
+                <a href="{{.video}}" class="glightbox btn-watch-video"
+                  ><i class="bi bi-play-fill"></i
+                ></a>
               </div>
             </div>
           </div>
-
-          <!---->
-          {{end}}
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Location Section -->
-<!---->
-{{end}}
+      </section>
+      {{end}}
+      <!---->
+      {{end}}
+
+      <section class="content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7">{{.Content}}</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= Location Section ======= -->
+
+      <section class="locations">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-9">
+              <div class="text-center mb-4">
+                <h2><b>Related Story</b></h2>
+              </div>
+              <div class="row">
+                {{ range first 3 (where site.RegularPages "Section"
+                "customers-story")}}
+                <!---->
+
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                  <div class="box mt-3">
+                    {{with .Params.information}}
+                    <img
+                      src="{{.img}}"
+                      alt="Location Header"
+                      class="img-fluid mb-3"
+                    />
+                    {{end}}
+
+                    <div class="content">
+                      {{with .Params.information}}
+                      <p>{{.description}}</p>
+                      {{end}}
+                      <a href="{{.Permalink}}"><strong>Read More</strong></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!---->
+                {{end}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Location Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer"}}
+    <!-- End Footer -->
+    {{ partial "scripts"}}
+  </body>
+</html>
