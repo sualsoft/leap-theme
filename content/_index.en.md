@@ -106,6 +106,7 @@ testimonials:
         sunt aliqua noster fugiat irure amet legam anim culpa.
 
 about:
+  enable: false
   image: /assets/img/about.png
   name: Tony Chan
   content: Easy Health has really helped to improve my nutrition. The food is
@@ -116,6 +117,14 @@ about:
   btn_link: /
   btn_label: Read all customer stories
 
+video:
+  enable: true
+  links:
+    - link: https://www.youtube.com/watch?v=KITH5cdS7Xs
+      img: /assets/img/customer-bg.png
+
+    - link: https://www.youtube.com/watch?v=KITH5cdS7Xs
+      img: /assets/img/customer-bg.png
 coupon:
   enable: true
   title: 10% off coupon get yours when sign up

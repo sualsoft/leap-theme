@@ -3,11 +3,15 @@
   --green-color: #6c9286;
 }
 
+@font-face {
+  font-family: lineFont;
+  src: url(/assets/fonts/WOFF/LINESeedSansTH_W_Th.woff);
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   color: #444444;
 }
 
@@ -27,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif Kannada", serif;
+  font-family: "lineFont";
 }
 
 /*--------------------------------------------------------------
@@ -128,7 +132,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   font-size: 15px;
   font-weight: 500;
   color: #c9c8c8;
@@ -470,7 +474,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Noto Serif Kannada", serif;
+  font-family: "lineFont";
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -571,7 +575,7 @@ h6 {
   z-index: 1;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
 }
 
 .hero-inner p {
@@ -582,7 +586,6 @@ h6 {
 
 .customer-bg {
   height: 250px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -591,9 +594,10 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 12px;
 }
 .content {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
 }
 
 .content h2 {
@@ -601,8 +605,8 @@ h6 {
 }
 .customer-bg a {
   background-color: var(--green-color);
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
   border-radius: 60%;
   display: flex;
   justify-content: center;
@@ -611,7 +615,12 @@ h6 {
 
 .customer-bg a i {
   color: var(--cream-color);
-  font-size: 48px;
+  font-size: 36px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -649,7 +658,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
 }
 
 .section-title h2::after {
@@ -667,7 +676,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   color: #556270;
 }
 
@@ -767,7 +776,7 @@ section {
   font-size: 36px;
   color: var(--green-color);
   font-weight: 600;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   margin-bottom: 20px;
 }
 
@@ -828,7 +837,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Noto Serif Kannada", serif;
+  font-family: "lineFont";
   font-weight: 600;
   transition: 0.3s;
 }
@@ -881,7 +890,7 @@ section {
 .pricing .how-to-work h2 {
   color: var(--green-color);
   font-weight: 700;
-  font-family: "Noto Serif Kannada", serif;
+  font-family: "lineFont";
   background-color: transparent;
 }
 
@@ -891,7 +900,7 @@ section {
 .pricing .how-to-work h3 span {
   color: var(--cream-color);
   display: flex;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   justify-content: center;
   align-items: center;
   border-radius: 700px;
@@ -1574,7 +1583,7 @@ Modal body
 .blog .box {
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
 }
 
 .blog .box img {
@@ -1582,11 +1591,11 @@ Modal body
 }
 
 .blog .box .content {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   padding: 25px 20px;
 }
 .blog .box h5 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "lineFont";
   display: flex;
   justify-content: space-between;
   font-weight: 700;
