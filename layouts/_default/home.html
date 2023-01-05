@@ -87,10 +87,14 @@
 <!-- ======= Pricing Section ======= -->
 <section class="pricing">
   <div class="container">
-    <header class="text-center mb-5">
-      <h2>Meal plansp</h2>
-      <p>Meal prep designed for all lifestyles.</p>
-    </header>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-9">
+        <header class="text-center mb-5">
+          <h2>Meal plansp</h2>
+          <p>Meal prep designed for all lifestyles.</p>
+        </header>
+      </div>
+    </div>
     <div class="row">
       {{ range (where site.RegularPages "Type" "meal_feature")}}
       <!---->
@@ -158,9 +162,13 @@
 {{ if.enable}}
 <section class="order">
   <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <div class="col-md-9">
+        <h2 class="mb-1">{{.title}}</h2>
+        <p class="mb-4">{{.subtitle}}</p>
+      </div>
+    </div>
     <div class="row text-center">
-      <h2 class="mb-1">{{.title}}</h2>
-      <p class="mb-4">{{.subtitle}}</p>
       {{ range.images}}
       <div class="col-lg-3 mt-5">
         <img src="{{.}}" alt="Image" class="img-fluid" />
@@ -224,9 +232,13 @@
 {{if .enable}}
 <section id="testimonials" class="testimonials">
   <div class="container" data-aos="fade-up">
-    <header class="section-header text-center">
-      <h2>{{.title}}</h2>
-    </header>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-9">
+        <header class="section-header text-center">
+          <h2>{{.title}}</h2>
+        </header>
+      </div>
+    </div>
 
     <div
       class="testimonials-slider swiper"
@@ -297,13 +309,13 @@
 
 <!-- ======= Video Section ======= -->
 {{with .Params.video}}
-<section class="video">
+<section class="video mb-5">
   <div class="container">
     <div class="row">
       {{ range .links}}
       <div class="col-lg-6">
         <div
-          class="customer-bg p-lg-3"
+          class="customer-bg p-3"
           style="background-image: url({{.img}}); "
           data-aos="fade-up"
           data-aos-delay="200"
@@ -314,6 +326,7 @@
             ></a>
           </div>
         </div>
+        <p class="name">{{.name}}</p>
       </div>
       {{end}}
     </div>

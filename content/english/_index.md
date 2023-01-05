@@ -122,9 +122,11 @@ video:
   links:
     - link: https://www.youtube.com/watch?v=KITH5cdS7Xs
       img: /assets/img/customer-bg.png
+      name: Customer Name
 
     - link: https://www.youtube.com/watch?v=KITH5cdS7Xs
       img: /assets/img/customer-bg.png
+      name: Customer Name 2
 coupon:
   enable: true
   title: 10% off coupon get yours when sign up

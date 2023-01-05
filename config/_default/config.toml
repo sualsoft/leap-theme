@@ -1,0 +1,6 @@
+######################## default configuration ####################
+baseURL = "https://adorable-biscuit-44e444.netlify.app/"
+title = "Leap Theme by sumiyuru"
+
+[markup.goldmark.renderer]
+unsafe = true
