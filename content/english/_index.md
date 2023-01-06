@@ -7,7 +7,7 @@ hero_carousel:
   items:
     - bg: assets/img/slide/slide-1.jpg
       active: true
-      title: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus velit facilis haru
+      title: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus velit facilis 
       content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis laborum, ducimus natus hic laudantium incidunt illum perspiciatis ratione officiis?
       btn_label: Read More
       btn_link: /
