@@ -61,7 +61,7 @@ dishes:
       description: "Stir fried vegetables with shrimp, in a creamy garlic soy sauce. This healthy meal is a satisfying one pan dish that will totally satisfy your cravings. A combination of riceberry and oats will leave you feeling full and satisfied after your meal is complete."
       img: /assets/img/dish/fruit-skewers.jpg
       day: 1
-      id: plan-2
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -89,7 +89,7 @@ dishes:
       description: "Fried rice with riceberry, corn, edamame, egg, chicken breast and vegetables served with chili sauce and oyster sauce."
       img: /assets/img/dish/isaan.jpg
       day: 1
-      id: plan-3
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -117,7 +117,7 @@ dishes:
       description: "This nutritious bowl is made with quinoa, roasted pumpkins and broccoli, red cabbage, white cabbage, carrots and sliced almonds. We top it with a coriander and spring onion pesto dressing."
       img: /assets/img/dish/vegan-bowl.jpg
       day: 1
-      id: plan-4
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -145,7 +145,7 @@ dishes:
       description: "This pasta dish contains a variety of healthy, nutritious ingredients. It is made with tender chicken breast and mixed vegetables including zucchini and carrot to create a light yet filling meal that provides the right amount of energy to get through the day."
       img: /assets/img/dish/placeholder.jpg
       day: 1
-      id: plan-5
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -172,7 +172,7 @@ dishes:
       description: "The Egg White Skillet is a breakfast bowl overflowing with free-range egg whites and seasonal vegetables, topped with avocado and sunflower seeds. It's the perfect meal for satisfying your hunger."
       img: /assets/img/dish/eggwhite-skillet.jpg
       day: 2
-      id: plan-6
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -199,7 +199,7 @@ dishes:
       description: "This filling salad is full of delicious veggies such as quinoa, spinach, carrots and edamame. A great choice if you’re looking for something healthy to eat."
       img: /assets/img/dish/mega-veggie.jpg
       day: 2
-      id: plan-7
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -226,7 +226,7 @@ dishes:
       description: "Maple Syrup, Salt, Salmon, Balsamic, Coconut Milk and Lime teamed up with Broccoli and Spring Onion to create a healthy lunchtime alternative for you to enjoy."
       img: /assets/img/dish/salmon-maple-syrup-mashed-broccoli.jpg
       day: 2
-      id: plan-8
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -253,7 +253,7 @@ dishes:
       description: "Beet Heart is a drink to be loved by all. It has an abundance of beets, apples and lemons that complement each other to create a unique experience. Drink Beet Heart to enjoy these natural benefits"
       img: /assets/img/dish/beet-heart.jpg
       day: 2
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -280,7 +280,7 @@ dishes:
       description: "Delicious free range chicken, tasty riceberry and veggies cooked to perfection."
       img: /assets/img/dish/fajitas.jpg
       day: 2
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -307,7 +307,7 @@ dishes:
       description: "The Farmer Omelette is a farm-fresh feast of free-range eggs, bacon, shallots, cherry tomatoes and sweet potato served with cheddar cheese."
       img: /assets/img/dish/farmer-omelette.jpg
       day: 3
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -334,7 +334,7 @@ dishes:
       description: "Our Spring Roll Shrimp is stuffed with jumbo shrimp, carrot, green oak, red cabbage and spinach. It is then wrapped in riceberry wrap and served with spring roll sauce."
       img: /assets/img/dish/spring-roll-shrimp.jpg
       day: 3
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -361,7 +361,7 @@ dishes:
       description: "Vegan, healthy and delicious! Sauteed carrot, broccoli and cauliflower with organic tofu in a light lemongrass coconut oil."
       img: /assets/img/dish/tofu-fitness-meal.jpg
       day: 3
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -388,7 +388,7 @@ dishes:
       description: "This superfood-packed treat is so easy to make and will keep for weeks in the fridge. They’re naturally sweetened with dates, have a soft chewy texture, and are full of energy boosting super seeds such as chia and sunflower. Perfect as an afternoon snack or as post workout fuel!"
       img: /assets/img/dish/raw-energy-balls.jpg
       day: 3
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -415,7 +415,7 @@ dishes:
       description: "Pleasantly seasoned ground chicken tossed with riceberries and fresh vegetables served with kua kling curry dressing"
       img: /assets/img/dish/sa-tun.jpg
       day: 3
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -442,7 +442,7 @@ dishes:
       description: "Tasty vegan toast, packed with hummus and sauteed spinach with organic tofu. Topped with sweet potato, sunflower seeds and side salad. Yum!"
       img: /assets/img/dish/vegan-toast.jpg
       day: 4
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -469,7 +469,7 @@ dishes:
       description: "Spring Roll Avocado is a great way to enjoy the taste of spring roll but keep it light. Garlic and onion are fried in oil, carrots, green oak and red cabbage are added, then it’s paired with fresh spinach and avocado."
       img: /assets/img/dish/spring-roll-avocado.jpg
       day: 4
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -496,7 +496,7 @@ dishes:
       description: "Freshest and most delicious ingredients come together in this beautiful taco. The shrimp is cooked in a fragrant garlic and coriander sauce and then placed on a bed of red cabbage, tomatoes and coriander. This will be your new favorite!"
       img: /assets/img/dish/mediterranean-taco.jpg
       day: 4
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -523,7 +523,7 @@ dishes:
       description: "This soup is the perfect cozy meal for a cold day. The ginger and coconut milk complement each other for a flavorful and delicious soup, and it's even better topped with a pinch of coriander root and black pepper."
       img: /assets/img/dish/ginger-carrot-soup.jpg
       day: 4
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -550,7 +550,7 @@ dishes:
       description: "This Thai-style stir fried chicken recipe is a simple and tasty dish, made with lean chicken breast, cashew nuts, larger sliced onions and a light coconut milk base."
       img: /assets/img/dish/chicken-cashew.jpg
       day: 4
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -577,7 +577,7 @@ dishes:
       description: "This salmon egg dish is so simple, yet so delicious! The fresh flavors of spinach and shallots pair perfectly with the rich salmon eggs."
       img: /assets/img/dish/placeholder.jpg
       day: 5
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -604,7 +604,7 @@ dishes:
       description: "Our Nordic is made with Atlantic salmon, avocado and baby kale on a bed of carrots and edamame. A yogurt-based dressing tops it all off."
       img: /assets/img/dish/nordic.jpg
       day: 5
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -631,7 +631,7 @@ dishes:
       description: "Our Nordic is made with Atlantic salmon, avocado and baby kale on a bed of carrots and edamame. A yogurt-based dressing tops it all off."
       img: /assets/img/dish/tataki-salmon.jpg
       day: 5
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -658,7 +658,7 @@ dishes:
       description: "This soup is a healthy alternative to potato soup. The cauliflower adds a creaminess and flavour to the soup, blending perfectly with the bacon and coconut milk."
       img: /assets/img/dish/cauliflower-soup.jpg
       day: 5
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
@@ -685,7 +685,7 @@ dishes:
       description: "Edamame with Sea Salt is a delicious snack. These beans have been boiled and then lightly salted, so they’re pure and healthy while still totally tasty! They make a great addition to any salad or just as a quick pick-me-up."
       img: //assets/img/dish/edamame.jpg
       day: 5
-      id: plan-9
+      id: plan-1
       items:
         - title: Nutrition info
           list:
